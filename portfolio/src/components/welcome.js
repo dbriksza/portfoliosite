@@ -4,6 +4,7 @@ import TextWriter from "../utils/textwriter";
 import table from "../assets/table.png"
 import resume from "../assets/resume.png"
 import cup from "../assets/cup.png"
+import water from "../assets/water.png"
 
 const Welcome = () => {
     
@@ -20,6 +21,8 @@ const Welcome = () => {
 
     const clickHandle = (input) =>{
         TextWriter(input)
+        document.getElementById("cup").classList.add("fallover")
+        document.getElementById("water").classList.add("water")
     }
 
 
@@ -39,8 +42,10 @@ const Welcome = () => {
                 {/* the table set */}
                     {/* the table */}
                     <img src={table} style={{position: "absolute", top: "-250px", left: "-250px", height:"500px", width: "500px"}}/>
+                    {/* the cup */}
+                    <img id="cup" src={cup} style={{position: "absolute", top: "-250px", left: "-250px", height:"500px", width: "500px", transformOrigin: "200px 200px", zIndex: "10"}}/>
                     {/* the water */}
-                    <img src={cup} style={{position: "absolute", top: "-250px", left: "-250px", height:"500px", width: "500px"}}/>
+                    <img id="water" className="dry" src={water} style={{position: "absolute", top: "-260px", left: "-220px", height:"500px", width: "500px", zIndex: "5", transformOrigin: "200px 200px"}}/>
                     {/* the resume */}
                     <img src={resume} style={{position: "absolute", top: "-250px", left: "-250px", height:"500px", width: "500px"}}/>
                 </div>

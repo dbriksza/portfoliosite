@@ -22,7 +22,7 @@ span {
 
 .textanim{
   position: relative;
-  top: 5vh;
+  top: 3vh;
   text-align: center;
   font-size: 2rem;
   color: #fff;
@@ -66,6 +66,22 @@ span {
 
 .tableset{
   animation: startoff 4s 1
+}
+
+.fallover{
+  transform: rotate(90deg);
+  transition: transform 1s ease-in
+}
+
+.dry{
+  transform: scale(0);
+  opacity: 0%;
+}
+
+.water{
+  transform: scale(1);
+  opacity: 50%;
+  transition: transform 1s 1s, opacity 1s 1s
 }
 
 @keyframes caret {
@@ -133,6 +149,7 @@ span {
     opacity:100%
   }
 }
+
 
 /* .App {
   text-align: center;
