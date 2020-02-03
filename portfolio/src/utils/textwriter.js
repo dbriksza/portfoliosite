@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-function TextWriter(dataText){
+function TextWriter(input){
+
+    const [dataText, setDataText] = useState(input)
 
     // type one text in the typwriter
     // keeps calling itself until the text is finished
