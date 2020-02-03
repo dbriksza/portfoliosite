@@ -18,19 +18,23 @@ const Welcome = () => {
 
     window.onload = TextWriter(startingText)
 
+    const clickHandle = (input) =>{
+        TextWriter(input)
+    }
+
 
     return (
         <div className="welcome"> 
-            <div className="textanim">
+            <div id="animtextcontainer" className="textanim">
                 {/* the text */}
-                <span id="animtext">not working</span>
+                <span id="id1">not working</span>
             </div>
             <div className="lamp">
                 {/* the light */}
                 <div id="oval"><div id="circle"></div></div>
                 <div id="trapezoid"></div>
             </div>
-            <div onClick={() => TextWriter(postSpill)}>
+            <div onClick={() => clickHandle(postSpill)}>
                 <div className="tableset" style={{position: "absolute", top: "50%", left: "50%"}}>
                 {/* the table set */}
                     {/* the table */}
