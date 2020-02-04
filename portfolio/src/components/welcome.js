@@ -24,7 +24,7 @@ const Welcome = () => {
         document.getElementById("cup").classList.add("fallover")
         document.getElementById("water").classList.add("water")
     }
-
+    
 
     return (
         <div className="welcome"> 
