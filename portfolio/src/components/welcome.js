@@ -38,7 +38,7 @@ const Welcome = () => {
                 <div id="trapezoid"></div>
             </div>
             <div onClick={() => clickHandle(postSpill)}>
-                <div className="tableset" style={{position: "absolute", top: "50%", left: "50%"}}>
+                <div className="tableset" style={{position: "absolute", bottom: "20%", left: "50%"}}>
                 {/* the table set */}
                     {/* the table */}
                     <img src={table} style={{position: "absolute", top: "-250px", left: "-250px", height:"500px", width: "500px"}}/>

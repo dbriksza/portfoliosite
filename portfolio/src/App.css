@@ -75,12 +75,12 @@ span {
 
 .dry{
   transform: scale(0);
-  opacity: 0%;
+  opacity: 0;
 }
 
 .water{
   transform: scale(1);
-  opacity: 50%;
+  opacity: .5;
   transition: transform 1s 1s, opacity 1s 1s
 }
 
@@ -101,52 +101,52 @@ span {
 
 @keyframes flicker {
   0% {
-    opacity:0%
+    opacity:0;
   }
   1%{
-    opacity:100%
+    opacity:1;
   }
   10%{
-    opacity:100%
+    opacity:1;
   }
   11%{
-    opacity:0%
+    opacity:0;
   }
   13%{
-    opacity:100%
+    opacity:1;
   }
   16%{
-    opacity:100%
+    opacity:1;
   }
   17%{
-    opacity:0%
+    opacity:0;
   }
   19%{
-    opacity:100%
+    opacity:1;
   }
   30%{
-    opacity:100%
+    opacity:1;
   }
   31%{
-    opacity:0%
+    opacity:0;
   }
   32%{
-    opacity:100%
+    opacity:1;
   }
   100% {
-    opacity:100%
+    opacity:1;
   }
 }
 
 @keyframes startoff {
   0%{
-    opacity: 0%
+    opacity:0;
   }
   90%{
-    opacity:0%
+    opacity:0;
   }
   100%{
-    opacity:100%
+    opacity:1;
   }
 }
 
