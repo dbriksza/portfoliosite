@@ -5,8 +5,6 @@ body {
   height: 100%;
   font-family: 'IBM Plex Mono', monospace;
   background-color: #1e1e20;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 h1 {
@@ -15,9 +13,15 @@ h1 {
   text-transform: uppercase;
 }
 
-span {
+.text {
   border-right: .05em solid;
   animation: caret 1s steps(1) infinite;
+}
+
+nav{
+  width: 33%;
+  display:flex;
+  justify-content: space-between;
 }
 
 .textanim{
@@ -27,6 +31,7 @@ span {
   font-size: 2rem;
   color: #fff;
 }
+
 
 #oval {
   z-index:-1;
@@ -82,6 +87,10 @@ span {
   transform: scale(1);
   opacity: .5;
   transition: transform 1s 1s, opacity 1s 1s
+}
+
+#pf1{
+  transform:scale(2)
 }
 
 @keyframes caret {
@@ -149,6 +158,33 @@ span {
     opacity:1;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .textanim{
+    font-size: 1rem;
+  }
+  #oval{
+    width: 100px;
+    height: 50px;
+    border-radius: 50px / 25px;
+  }
+  #trapezoid{
+    border-bottom: 100vh solid whitesmoke;
+    border-left: calc(50vw - 50px) solid transparent;
+    border-right: calc(50vw - 50px) solid transparent;
+  }
+  nav{
+    width:100%;
+  }
+  .welcome{
+    max-width:100vw;
+    max-height:100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+
 
 
 /* .App {

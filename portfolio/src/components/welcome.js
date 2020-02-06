@@ -30,7 +30,7 @@ const Welcome = () => {
         <div className="welcome"> 
             <div id="animtextcontainer" className="textanim">
                 {/* the text */}
-                <span id="id1">not working</span>
+                <span id="id1" className="text">not working</span>
             </div>
             <div className="lamp">
                 {/* the light */}
