@@ -18,9 +18,9 @@ const NavBar = () => {
             />
             <div>
                 <nav>
-                    <button onClick={() => (setModalState(<Resume/>), toggle())}>Resume</button>
-                    <button to="">Projects</button>
-                    <button to="">Contact</button>
+                    <button className="navButton" id="resumeButton" onClick={() => (setModalState(<Resume/>), toggle())}>Resume</button>
+                    <button className="navButton" >Projects</button>
+                    <button className="navButton" >Contact</button>
                 </nav>
             </div>
         </>

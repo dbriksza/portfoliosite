@@ -23,6 +23,7 @@ const Welcome = () => {
         TextWriter(input)
         document.getElementById("cup").classList.add("fallover")
         document.getElementById("water").classList.add("water")
+        document.getElementById("resumeButton").disabled = true;
     }
     
 
