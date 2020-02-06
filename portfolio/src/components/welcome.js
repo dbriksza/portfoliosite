@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import TextWriter from "../utils/textwriter";
+import Resume from "./resume/resume"
 
 import table from "../assets/table.png"
 import resume from "../assets/resume.png"
@@ -7,7 +8,7 @@ import cup from "../assets/cup.png"
 import water from "../assets/water.png"
 
 const Welcome = () => {
-    
+
     // array with texts to type in typewriter
     var startingText = ["Welcome to my portfolio site...", 
     "My resume is on the table, take a look", 
@@ -19,11 +20,19 @@ const Welcome = () => {
 
     window.onload = TextWriter(startingText)
 
+    const loop = () => {
+        setTimeout(function run() {
+            Array.from(document.getElementsByClassName("t")).forEach(item => item.classList.add("wet"));
+            if(document.getElementById("paper")){document.getElementById("paper").classList.add("paperwet")};
+            setTimeout(run, 100);
+        }, 100);
+    }
+
     const clickHandle = (input) =>{
-        TextWriter(input)
-        document.getElementById("cup").classList.add("fallover")
-        document.getElementById("water").classList.add("water")
-        document.getElementById("resumeButton").disabled = true;
+        TextWriter(input);
+        document.getElementById("cup").classList.add("fallover");
+        document.getElementById("water").classList.add("water");
+        loop();
     }
     
 

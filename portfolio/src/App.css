@@ -35,6 +35,17 @@ nav{
   color: #fff;
 }
 
+.wet{
+  text-shadow: 0 0 20px #8800ff, 0 0 30px #000000;
+}
+
+.paperdry{
+  opacity:0;
+}
+
+.paperwet{
+  opacity:1;
+}
 
 #oval {
   z-index:-1;

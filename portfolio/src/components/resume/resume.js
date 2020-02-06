@@ -4,7 +4,11 @@ import "./main.css"
 import "./fancy.min.css"
 import "./base.min.css"
 
-const Resume = () => {
+import overlay from "../../assets/wet-overlay.png"
+
+const Resume = (props) => {
+    
+
     return(
         <div>
             {/* <div id="sidebar">
@@ -12,7 +16,9 @@ const Resume = () => {
                 </div>
             </div>
             <div id="page-container"> */}
+            
                 <div id="pf1" className="pf w0 h0" data-page-no="1">
+                <img id="paper" class="paperdry" src={overlay}/>
                     <div className="pc pc1 w0 h0">
                     <div className="c x0 y0 w1 h1">
                     <div className="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">Daniel Briksza</div>
