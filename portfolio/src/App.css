@@ -1,12 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=IBM + Plex + Mono&display=swap);
 
 body {
   /* background-color: #FF5A5A; */
-  max-width:100vw;
-  max-height:100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   background-color: #1e1e20;
 }
 
@@ -16,18 +16,50 @@ h1 {
   text-transform: uppercase;
 }
 
-.text {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
+/* Nav Styling */
 
-nav{
+nav {
   width: 45%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-.textanim{
+.navButton {
+  z-index: 999;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.navButton:hover {
+  background-color: #72b352;
+}
+.navButton:active {
+  position: relative;
+  top: 1px;
+}
+.navButton:disabled {
+  cursor: not-allowed;
+  color: grey;
+  background-color: orangered;
+}
+
+/* Splash page animations */
+
+.text {
+  border-right: 0.05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+.textanim {
   position: relative;
   top: 3vh;
   text-align: center;
@@ -35,38 +67,26 @@ nav{
   color: #fff;
 }
 
-.wet{
-  text-shadow: 0 0 20px #8800ff, 0 0 30px #000000;
-}
-
-.paperdry{
-  opacity:0;
-}
-
-.paperwet{
-  opacity:1;
-}
-
 #oval {
-  z-index:-1;
+  z-index: -1;
   position: relative;
-  top:5vh;
+  top: 5vh;
   width: 200px;
   height: 100px;
-  background: #434C0B;
+  background: #434c0b;
   border-radius: 100px / 50px;
-  margin:auto;
+  margin: auto;
 }
 
 #circle {
-  z-index:-1;
+  z-index: -1;
   position: relative;
-  top:5vh;
+  top: 5vh;
   width: 30px;
   height: 30px;
   background: yellow;
   border-radius: 50px;
-  margin:auto;
+  margin: auto;
 }
 
 #trapezoid {
@@ -78,62 +98,104 @@ nav{
   animation: startoff 4s 1, flicker 5s infinite linear 5s;
 }
 
-.lamp{
+.lamp {
   transform-origin: top center;
   animation: swing 2s infinite alternate ease-in-out;
 }
 
-.tableset{
-  animation: startoff 4s 1
+.tableset {
+  animation: startoff 4s 1;
 }
 
-.fallover{
+.fallover {
   transform: rotate(90deg);
-  transition: transform 1s ease-in
+  transition: transform 1s ease-in;
 }
 
-.dry{
+.dry {
   transform: scale(0);
   opacity: 0;
 }
 
-.water{
+.water {
   transform: scale(1);
-  opacity: .5;
-  transition: transform 1s 1s, opacity 1s 1s
+  opacity: 0.5;
+  transition: transform 1s 1s, opacity 1s 1s;
 }
 
-#pf1{
-  transform:scale(2);
+/* Resume Styling */
+
+.wet {
+  text-shadow: 0 0 20px #8800ff, 0 0 30px #000000;
+  filter: blur(5px);
+}
+
+.paperdry {
+  opacity: 0;
+}
+
+.paperwet {
+  opacity: 1;
+  filter: blur(2px);
+}
+
+#pf1 {
+  transform: scale(2);
   margin-top: 400px;
 }
 
-.navButton {  
-  z-index:999;
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+/* Project Styling */
+
+#projectContainer {
+  background-color: #d9f5e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  padding: 25px;
+}
+
+h3 {
+  margin: 20px;
+}
+
+.projectBlurbs {
+  margin: 40px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-loading {
+  width: 80%;
+  height: 500px;
+  background: #fff url("assets/loading.gif") no-repeat fixed center;
+}
+
+/* Contact Styling */
+
+input {
+  font-family: "IBM Plex Mono", monospace;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0;
+  padding: 15px 32px;
   margin: 4px 2px;
-  cursor: pointer;
 }
-.navButton:hover {
-  background-color:#72b352;
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.navButton:active {
-  position:relative;
-	top:1px;
-}
-.navButton:disabled {
-  cursor: not-allowed;
-  color: grey;
-  background-color: orangered;
-}
+
+/* Animations */
 
 @keyframes caret {
   50% {
@@ -146,127 +208,130 @@ nav{
     transform: rotate(-15deg);
   }
   to {
-    transform: rotate(15deg)
+    transform: rotate(15deg);
   }
 }
 
 @keyframes flicker {
   0% {
-    opacity:0;
+    opacity: 0;
   }
-  1%{
-    opacity:1;
+  1% {
+    opacity: 1;
   }
-  10%{
-    opacity:1;
+  10% {
+    opacity: 1;
   }
-  11%{
-    opacity:0;
+  11% {
+    opacity: 0;
   }
-  13%{
-    opacity:1;
+  13% {
+    opacity: 1;
   }
-  16%{
-    opacity:1;
+  16% {
+    opacity: 1;
   }
-  17%{
-    opacity:0;
+  17% {
+    opacity: 0;
   }
-  19%{
-    opacity:1;
+  19% {
+    opacity: 1;
   }
-  30%{
-    opacity:1;
+  30% {
+    opacity: 1;
   }
-  31%{
-    opacity:0;
+  31% {
+    opacity: 0;
   }
-  32%{
-    opacity:1;
+  32% {
+    opacity: 1;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @keyframes startoff {
-  0%{
-    opacity:0;
+  0% {
+    opacity: 0;
   }
-  90%{
-    opacity:0;
+  90% {
+    opacity: 0;
   }
-  100%{
-    opacity:1;
+  100% {
+    opacity: 1;
   }
 }
 
+/* Media Queries */
+
 @media only screen and (max-width: 1400px) {
-  #pf1{
-    transform:scale(1.5);
+  #pf1 {
+    transform: scale(1.5);
     margin-top: 200px;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  #pf1{
-    transform:scale(1);
-    margin-top: 0px;
+  #pf1 {
+    transform: scale(1.3);
+    margin-top: 125px;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .pc{
-    display:flex;
+  #pf1 {
+    transform: scale(1);
+    margin-top: 0px;
+  }
+  .pc {
+    display: flex;
     flex-direction: column;
   }
-  .c{
-    position:inherit;
+  .c {
+    position: inherit;
   }
-  .modal{
-    padding:0;
-    max-width:100vw;
+  .modal {
+    padding: 0;
+    max-width: 100vw;
   }
-  .x0{
-    left:50px;
-    top:20px;
+  .x0 {
+    left: 10px;
+    top: 20px;
   }
-  .x2{
-    left:50px;
-    top:740px;
+  .x2 {
+    left: 10px;
+    top: 740px;
   }
-  .h0{
-    height:1370px;
+  .h0 {
+    height: 1370px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .textanim{
+  .textanim {
     font-size: 1rem;
   }
-  #oval{
+  #oval {
     width: 100px;
     height: 50px;
     border-radius: 50px / 25px;
   }
-  #trapezoid{
+  #trapezoid {
     border-bottom: 100vh solid whitesmoke;
     border-left: calc(50vw - 50px) solid transparent;
     border-right: calc(50vw - 50px) solid transparent;
   }
-  nav{
-    width:100%;
+  nav {
+    width: 100%;
   }
-  .welcome{
-    max-width:100vw;
-    max-height:100vh;
+  .welcome {
+    max-width: 100vw;
+    max-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
   }
 }
-
-
-
 
 /* .App {
   text-align: center;
