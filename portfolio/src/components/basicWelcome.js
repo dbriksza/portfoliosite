@@ -11,23 +11,41 @@ const BasicWelcome = () => {
     "Click below to check it out",
     "Or you can just look at the above links",
   ];
-  window.onload = TextWriter(startingText);
+  var mobileText = [
+    "Welcome to my portfolio site!",
+    "Thanks for taking a look",
+    "Check out the buttons above for more info!",
+  ];
+
+  const checkWidth = () => {
+    if (window.innerWidth >= 700) {
+      TextWriter(startingText);
+    } else {
+      TextWriter(mobileText);
+    }
+  };
+
+  window.onload = checkWidth();
+
   const handleClick = () => {
     // document.getElementById("animtextcontainer").remove();
     setAnimate(!animate);
   };
   return (
-    <div>
+    <div className="basicHome">
       {animate ? (
         <Welcome />
       ) : (
-        <div id="animtextcontainer" className="textanim">
+        <div className="textanim">
           {/* the text */}
           <span id="id1" className="text">
             not working
           </span>
           <br />
-          <button className="navButton" onClick={() => handleClick()}>
+          <button
+            className="navButton playAnimButton"
+            onClick={() => handleClick()}
+          >
             Mild Strobe Light Warning
           </button>
         </div>

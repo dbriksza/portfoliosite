@@ -1,5 +1,8 @@
 import React from "react";
 
+import CitricsIMG from "../assets/citrics.PNG";
+import SFRIMG from "../assets/sfr.PNG";
+
 const Projects = () => {
   return (
     <div id="projectContainer">
@@ -31,9 +34,15 @@ const Projects = () => {
           <li>AWS Elastic Beanstalk</li>
         </ul>
       </div>
-      <iframe className="iframe-loading" src="https://v1.citrics.io">
-        > Sorry your browser does not support inline frames.
-      </iframe>
+      {window.innerWidth >= 700 ? (
+        <iframe className="iframe-loading" src="https://v1.citrics.io">
+          > Sorry your browser does not support inline frames.
+        </iframe>
+      ) : (
+        <a href="https://v1.citrics.io">
+          <img src={CitricsIMG} style={{ width: "75%" }} />
+        </a>
+      )}
       <div>
         <h3>
           <a href="https://frontend.bw-secret-family-recipes.now.sh">
@@ -58,12 +67,18 @@ const Projects = () => {
           <li>Redux</li>
         </ul>
       </div>
-      <iframe
-        className="iframe-loading"
-        src="https://frontend.bw-secret-family-recipes.now.sh"
-      >
-        > Sorry your browser does not support inline frames.
-      </iframe>
+      {window.innerWidth >= 700 ? (
+        <iframe
+          className="iframe-loading"
+          src="https://frontend.bw-secret-family-recipes.now.sh"
+        >
+          > Sorry your browser does not support inline frames.
+        </iframe>
+      ) : (
+        <a href="https://frontend.bw-secret-family-recipes.now.sh">
+          <img src={SFRIMG} />
+        </a>
+      )}
     </div>
   );
 };

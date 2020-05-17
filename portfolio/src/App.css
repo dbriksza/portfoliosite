@@ -308,6 +308,9 @@ input {
 }
 
 @media only screen and (max-width: 700px) {
+  .playAnimButton {
+    display: none;
+  }
   #pf1 {
     transform: scale(1);
     margin-top: 0px;
@@ -337,9 +340,6 @@ input {
 }
 
 @media only screen and (max-width: 600px) {
-  .textanim {
-    font-size: 1rem;
-  }
   #oval {
     width: 100px;
     height: 50px;
