@@ -3,18 +3,21 @@ import axios from "axios";
 
 const Email = () => {
   const [email, setEmail] = useState("");
-  const handleChange = e => {
+  const handleChange = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
   };
   const sendEmail = () => {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       axios
-        .post("https://portfolio-dbriksza.herokuapp.com/send", { email: email })
-        .then(res => {
+        .post(
+          "https://cors-anywhere.herokuapp.com/https://portfolio-dbriksza.herokuapp.com/send",
+          { email: email }
+        )
+        .then((res) => {
           console.log(res);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
       setEmail("");
