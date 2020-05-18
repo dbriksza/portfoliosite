@@ -79,6 +79,31 @@ const Projects = () => {
           <img src={SFRIMG} />
         </a>
       )}
+      <div>
+        <h3>
+          <a href="https://github.com/dbriksza/python-scripts">
+            Some Python Scripts!
+          </a>
+        </h3>
+        <p class="projectBlurbs">
+          These python scripts were made to automate the process of editing
+          HTMLs. In the process of redoing a blog site, I quickly realized
+          editing 500+ pages of HTML would not be efficient without the use of
+          some python. These scripts are capable of editing any amount of HTML's
+          to remove and add styling, text, bloat, scripts and whatever else.
+          There is also functionality to put HTML's in proper directories based
+          on whatever makes the most sense (dates for this blog site) so it
+          would be a fully functional site- including linking the pages to one
+          another so it's fully navigable- so just upload the whole file
+          strcucture to whatever hosting service for a fully working website!
+          (It's not super easy to use, but it's pretty powerful, and with some
+          more work it might get there)
+        </p>
+        <h4>Tech Stack</h4>
+        <ul>
+          <li>Python 3.8</li>
+        </ul>
+      </div>
     </div>
   );
 };

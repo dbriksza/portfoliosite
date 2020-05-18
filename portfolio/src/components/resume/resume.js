@@ -8,7 +8,7 @@ import overlay from "../../assets/wet-overlay.png";
 
 import Email from "../contact/email";
 
-const Resume = props => {
+const Resume = (props) => {
   return (
     <div>
       {/* <div id="sidebar">
@@ -38,7 +38,7 @@ const Resume = props => {
             </div>
             <div className="t m0 x1 h3 y5 ff2 fs1 fc0 sc0 ls0 ws0">
               anything worth doing that it will be the best I can do and it will
-              be damn good.{" "}
+              excellent.{" "}
             </div>
           </div>
           <div className="c x2 y0 w2 h1">
@@ -48,11 +48,28 @@ const Resume = props => {
             <div className="t m0 x1 h4 y7 ff3 fs1 fc0 sc0 ls0 ws0">
               Valley Stream NY, 11580
             </div>
-            <div className="t m0 x1 h4 y8 ff4 fs1 fc0 sc0 ls0 ws0">
-              https://github.com/dbriksza
+            <div className="t m0 x1 h4 y8 ff7 fs1 fc0 sc0 ls0 ws0">
+              <a href="https://portfolio.dbriksza.now.sh/">
+                https://portfolio.dbriksza.now.sh/
+              </a>
             </div>
             <div className="t m0 x1 h4 y9 ff4 fs1 fc0 sc0 ls0 ws0">
+              <a href="https://github.com/dbriksza">
+                https://github.com/dbriksza
+              </a>
+            </div>
+            <div className="t m0 x1 h4 custom1 ff4 fs1 fc0 sc0 ls0 ws0">
               dbriksza@gmail.com
+            </div>
+            <div className="t m0 x1 h4 custom2 ff7 fs1 fc0 sc0 ls0 ws0">
+              <a href="https://www.linkedin.com/in/daniel-briksza-23a331191/">
+                https://www.linkedin.com/in/
+              </a>
+            </div>
+            <div className="t m0 x1 h4 custom3 ff7 fs1 fc0 sc0 ls0 ws0">
+              <a href="https://www.linkedin.com/in/daniel-briksza-23a331191/">
+                daniel-briksza-23a331191/
+              </a>
             </div>
           </div>
         </div>
@@ -142,29 +159,30 @@ const Resume = props => {
           </div>
           <div className="c x2 yb w2 h6">
             <div className="t m0 x1 h4 yc ff4 fs1 fc1 sc0 ls0 ws0">SKILLS</div>
-            <div className="t m0 x4 h9 y21 ff5 fs1 fc2 sc0 ls0 ws0">
+            <div className="t m0 x1 h9 y21 ff5 fs1 fc2 sc0 ls0 ws0">
               Front-End Web{" "}
             </div>
             <div className="t m0 x1 h9 y22 ff5 fs1 fc2 sc0 ls0 ws0">
               Development
             </div>
-            <div className="t m0 x4 h9 y23 ff5 fs1 fc2 sc0 ls0 ws0">
+            <div className="t m0 x1 h9 y23 ff5 fs1 fc2 sc0 ls0 ws0">
               Back-End Web{" "}
             </div>
             <div className="t m0 x1 h9 y24 ff5 fs1 fc2 sc0 ls0 ws0">
               Development
             </div>
-            <div className="t m0 x4 h9 y25 ff5 fs1 fc2 sc0 ls0 ws0">
+            <div className="t m0 x1 h9 y25 ff5 fs1 fc2 sc0 ls0 ws0">
               Management
             </div>
-            <div className="t m0 x4 h9 y26 ff5 fs1 fc2 sc0 ls0 ws0">
+            <div className="t m0 x1 h9 y26 ff5 fs1 fc2 sc0 ls0 ws0">
               Customer Service
             </div>
             <div className="t m0 x1 h4 y27 ff4 fs1 fc1 sc0 ls0 ws0">
               PROJECTS
             </div>
             <div className="t m0 x1 ha y28 ff1 fs1 fc2 sc0 ls0 ws0">
-              https://v1.citrics.io<span className="ff5"> My Lambda </span>
+              <a href="https://v1.citrics.io">https://v1.citrics.io</a>
+              <span className="ff5"> My Lambda </span>
             </div>
             <div className="t m0 x1 h9 y29 ff5 fs1 fc2 sc0 ls0 ws0">
               labs project. Worked on a{" "}
@@ -191,10 +209,15 @@ const Resume = props => {
               I acquire new skills
             </div>
             <div className="t m0 x1 ha y31 ff1 fs1 fc2 sc0 ls0 ws0">
-              https://github.com/dbriksza?
+              <a href="https://github.com/dbriksza?tab=repositories">
+                https://github.com/dbriksza?
+              </a>
             </div>
             <div className="t m0 x1 ha y32 ff1 fs1 fc2 sc0 ls0 ws0">
-              tab=repositories<span className="ff5"> my github </span>
+              <a href="https://github.com/dbriksza?tab=repositories">
+                tab=repositories
+              </a>
+              <span className="ff5"> my github </span>
             </div>
             <div className="t m0 x1 h9 y33 ff5 fs1 fc2 sc0 ls0 ws0">
               repositories containing my{" "}
@@ -214,7 +237,7 @@ const Resume = props => {
                 bottom: "442.409027px",
                 width: "128.123993px",
                 height: "11.312988px",
-                backgroundColor: "rgba(255,255,255,0.000001)"
+                backgroundColor: "rgba(255,255,255,0.000001)",
               }}
             ></div>
           </a>
@@ -228,7 +251,7 @@ const Resume = props => {
                 bottom: "427.703003px",
                 width: "24.290985px",
                 height: "11.313019px",
-                backgroundColor: "rgba(255,255,255,0.000001)"
+                backgroundColor: "rgba(255,255,255,0.000001)",
               }}
             ></div>
           </a>
