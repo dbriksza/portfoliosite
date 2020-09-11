@@ -8,7 +8,7 @@ const Projects = () => {
     <div id="projectContainer">
       <div>
         <h3>
-          <a href="https://v1.citrics.io">Citrics.io</a>
+          <p>Citrics.io</p>
         </h3>
         <p class="projectBlurbs">
           Citrics.io is a city data comparison app that was built from scratch
@@ -34,15 +34,15 @@ const Projects = () => {
           <li>AWS Elastic Beanstalk</li>
         </ul>
       </div>
-      {window.innerWidth >= 700 ? (
-        <iframe className="iframe-loading" src="https://v1.citrics.io">
-          > Sorry your browser does not support inline frames.
-        </iframe>
-      ) : (
-        <a href="https://v1.citrics.io">
-          <img src={CitricsIMG} style={{ width: "75%" }} />
-        </a>
-      )}
+      <img src={CitricsIMG} style={{ width: "75%" }} />
+      <p>
+        Unfortunately, this site has been taken down due to administration costs
+        on the DS side. However, you can find the git repos below for an idea of
+        how the site worked.
+      </p>
+      <a href="https://github.com/dbriksza/city-data-comparison-fe">
+        Citrics.io Frontend on github
+      </a>
       <div>
         <h3>
           <a href="https://frontend.bw-secret-family-recipes.now.sh">
@@ -72,7 +72,7 @@ const Projects = () => {
           className="iframe-loading"
           src="https://frontend.bw-secret-family-recipes.now.sh"
         >
-          > Sorry your browser does not support inline frames.
+          Sorry your browser does not support inline frames.
         </iframe>
       ) : (
         <a href="https://frontend.bw-secret-family-recipes.now.sh">
@@ -103,6 +103,17 @@ const Projects = () => {
         <ul>
           <li>Python 3.8</li>
         </ul>
+      </div>
+      <div>
+        <h3>
+          <a href="https://github.com/dbriksza/danco_keys">
+            Customizeable Macro Keys
+          </a>
+        </h3>
+        <p class="projectBlurbs">
+          This is a piece of software that lets the user bind commands to any
+          key on the keyboard. Useful for quickly typing messages.
+        </p>
       </div>
     </div>
   );

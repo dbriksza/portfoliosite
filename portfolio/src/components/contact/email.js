@@ -10,10 +10,7 @@ const Email = () => {
   const sendEmail = () => {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       axios
-        .post(
-          "https://cors-anywhere.herokuapp.com/https://portfolio-dbriksza.herokuapp.com/send",
-          { email: email }
-        )
+        .post("https://portfolio-dbriksza.herokuapp.com/send", { email: email })
         .then((res) => {
           console.log(res);
         })
