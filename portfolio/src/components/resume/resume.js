@@ -83,12 +83,7 @@ const Resume = (props) => {
             <div className="t m0 x1 h4 yc ff4 fs1 fc1 sc0 ls0 ws0">
               EXPERIENCE
             </div>
-            <div className="t m0 x1 h7 yd ff1 fs2 fc0 sc0 ls0 ws0">
-              Carvel,{" "}
-              <span className="ff5">
-                Valley Stream — <span className="ff6">store clerk</span>
-              </span>
-            </div>
+           
             <div className="t m0 x1 h8 ye ff3 fs3 fc2 sc0 ls0 ws0">
               MAY 2013 - AUGUST 2016
             </div>
